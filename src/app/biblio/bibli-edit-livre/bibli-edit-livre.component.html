@@ -1,0 +1,66 @@
+ <body>
+	<div class="wrapper">
+		
+       <app-admin-hearder></app-admin-hearder>
+		<app-admin-sidebar></app-admin-sidebar>       
+        
+        <div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-head-row">
+										<div class="card-title">Editer Livre</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<form #editForm="ngForm">
+										<div class="row mt-3">
+                                            <div class="col-md-8 offset-2">
+												<div class="form-group form-group-default" style="display: none">
+													<label>Id</label>
+													<input ngModel="{{editLivre?.id}}" type="text" class="form-control" name="id">
+												</div>
+											</div>
+											<div class="col-md-8 offset-2">
+												<div class="form-group form-group-default">
+													<label>Libelle*</label>
+													<input ngModel="{{editLivre?.libelle}}" type="text" class="form-control" name="libelle">
+												</div>
+											</div>
+											<div class="col-md-8 offset-2">
+												<div class="form-group form-group-default">
+													<label>Auteur</label>
+													<input ngModel="{{editLivre?.auteur}}" type="auteur" class="form-control" name="auteur">
+												</div>
+											</div>
+											<div class="col-md-8 offset-2">
+												<div class="form-group form-group-default">
+													<label>Type</label>
+													<input ngModel="{{editLivre?.ouvrage}}" type="text" class="form-control" name="ouvrage">
+												</div>
+											</div>
+											<div class="col-md-8 offset-2" style="display:none">
+												<div class="form-group form-group-default">
+													<label>Etat</label>
+													<input ngModel="{{editLivre?.etat}}" type="text" class="form-control" name="etat">
+												</div>
+											</div>
+										</div>
+										<div class="text-center mt-3 mb-3">
+											<button class="btn btn-success" (click)="updateLivre(editForm.value)">Enregistrer</button>
+											<button class="btn btn-danger">Annuler</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+    </div>
+</body>

@@ -1,0 +1,101 @@
+<!-- Sidebar -->
+		<div class="sidebar">
+			
+			<div class="sidebar-background"></div>
+			<div class="sidebar-wrapper scrollbar-inner">
+				<div class="sidebar-content">
+					<div class="user">
+						<div class="avatar-sm float-left mr-2">
+							<img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+						</div>
+						<div class="info">
+							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									
+									<span class="user-level"></span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample">
+								<ul class="nav">
+									<li>
+										<a href="#settings" (click)="logout()">
+											Se déconnecter
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav">
+						<li class="nav-item active">
+							<a routerLink="/biblio-home">
+								<i class="fas fa-home"></i>
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#depot">
+								<i class="fas fa-clipboard-check"></i>
+								<p>Retour de Livres</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="depot">
+								<ul class="nav nav-collapse">
+									<li>
+										<a routerLink="/depot-add">
+											<span class="sub-item">Ajouter</span>
+										</a>
+									</li>
+									<li>
+										<a routerLink="/depot-all">
+											<span class="sub-item">Voir Tous</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+                        <li class="nav-item">
+							<a data-toggle="collapse" href="#livre">
+								<i class="fas fa-book"></i>
+								<p>Livres</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="livre">
+								<ul class="nav nav-collapse">
+									<li>
+										<a routerLink="/bibli-livre-add">
+											<span class="sub-item">Ajouter</span>
+										</a>
+									</li>
+									<li>
+										<a routerLink="/biblio-livre-delete">
+											<span class="sub-item">Voir Tous</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#reservation">
+								<i class="fas fa-clipboard-check"></i>
+								<p>Réservations</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="reservation">
+								<ul class="nav nav-collapse">
+									<li>
+										<a routerLink="/reservation-all">
+											<span class="sub-item">Voir Tous</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->

@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "gseeweb"
+  "defaultProject": "gseeweb",
+  "cli": {
+    "analytics": "3647f9d9-d7e3-49ff-b2f3-fe334e363b05"
+  }
 }

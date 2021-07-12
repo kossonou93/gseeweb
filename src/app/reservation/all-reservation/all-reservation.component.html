@@ -1,0 +1,51 @@
+<body>
+	<div class="wrapper">
+		
+       <app-biblio-hearder></app-biblio-hearder>
+		<app-biblio-sidebar></app-biblio-sidebar>
+
+        <div class="main-panel">
+				<div class="content">
+					<div class="page-inner">
+						<div class="page-header">
+							<h4 class="page-title">Toutes les Réservations</h4>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-head-row">
+											<div class="card-title">Voir les Réservations</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<table id="basic-datatables" class="table table-bordered table-head-bg-info table-bordered-bd-info mt-4">
+											<thead>
+												<tr>
+													<th scope="col">Id</th>
+													<th scope="col">Date de Réservation</th>
+													<th scope="col">Date de Depot</th>
+													<th scope="col">Livre</th>
+                                                    <th scope="col">Etudiant</th>
+												</tr>
+											</thead>
+											<tbody *ngFor="let reservation of reservations">
+												<tr>
+													<td>{{reservation.id}}</td>
+													<td>{{reservation.debut|date: 'dd/MM/yyyy'}}</td>
+													<td>{{reservation.fin|date: 'dd/MM/yyyy'}}</td>
+													<td>{{reservation.livre.libelle}}</td>
+                                                    <td>{{reservation.etudiant.email}}</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        
+	</div>
+</body>

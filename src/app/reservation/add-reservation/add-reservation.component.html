@@ -1,0 +1,65 @@
+<body>
+	<div class="wrapper">
+
+        <app-etudiant-hearder></app-etudiant-hearder>
+		<app-etudiant-sidebar></app-etudiant-sidebar>
+
+		<div class="main-panel">
+			<div class="content">
+				<div class="page-inner">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-head-row">
+										<div class="card-title">Réservations de Livre</div>
+									</div>
+								</div>
+								<div class="card-body">
+									<form #addForm="ngForm" (ngSubmit)="addReservation(addForm)">
+										<div class="row mt-3">
+											<div class="col-md-8 offset-2">
+												<div class="form-group form-group-default">
+													<label>Début de Réservation*</label>
+													<input ngModel type="date" class="form-control" name="debut">
+												</div>
+											</div>
+											<div class="col-md-8 offset-2">
+												<div class="form-group form-group-default">
+													<label>Fin de Réservation*</label>
+													<input ngModel type="date" class="form-control" name="fin">
+												</div>
+											</div>
+											<div class="col-md-8 offset-2">
+												<div class="form-group form-group-default">
+													<label for="squareSelect">Sélectionnez l'étudiant</label>
+                                                    <select ngModel="etudiant.email" name="etudiant" class="form-control input-square" id="squareSelect">
+                                                        <option *ngFor="let etudiant of etudiants" [ngValue]="etudiant.email" (change)="changeType($event)">{{etudiant.email}}</option>
+                                                    </select>
+												</div>
+											</div>
+											<div class="col-md-8 offset-2">
+												<div class="form-group form-group-default">
+													<label for="squareSelect">Sélectionnez le livre</label>
+                                                    <select ngModel="livre.id" name="livre" class="form-control input-square" id="squareSelect">
+                                                        <option *ngFor="let livre of livres" [ngValue]="livre.id" (change)="changeType($event)">{{livre.libelle}}</option>
+                                                    </select>
+												</div>
+											</div>
+										</div>
+										<div class="text-center mt-3 mb-3">
+											<button class="btn btn-success">Enregistrer</button>
+											<button [disabled]="addForm.invalid" class="btn btn-danger">Annuler</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+</body>

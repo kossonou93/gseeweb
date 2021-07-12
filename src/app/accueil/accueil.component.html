@@ -1,0 +1,23 @@
+<body class="login">
+	<div class="wrapper wrapper-login">
+		<div class="container container-login animated fadeIn">
+			<h3 class="text-center">BIENVENUE A VOTRE BIBLIOTHEQUE</h3>
+			<div class="login-form">
+                <form [formGroup]="ngForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="squareSelect">Sélectionnez le type d'utilisateur</label>
+                        <select formControlName="typeName" class="form-control input-square" id="squareSelect">
+                            <option *ngFor="let type of Type" [ngValue]="type" (change)="changeType($event)">{{type}}</option>
+                            <!--<option value="">ETUDIANT</option>
+                            <option value="">BIBLIOTHECAIRE</option>
+                            <option value="">ADMINISTRATEUR</option>-->
+                        </select>
+                    </div>
+                    <div class="form-action">
+                        <button type="submit" class="btn btn-primary btn-rounded btn-login">Validez</button>
+                    </div>
+                </form>
+			</div>
+		</div>
+	</div>
+</body>
