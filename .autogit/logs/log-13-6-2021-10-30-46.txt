@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jul 13 2021 10:30:46 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* src/app/biblio/biblio-sidebar/biblio-sidebar.component.html
+* src/app/etudiant/etudiant-sidebar/etudiant-sidebar.component.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
